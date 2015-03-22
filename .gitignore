@@ -1,0 +1,10 @@
+.idea
+.gradle
+gradle
+
+*.iml
+gradlew
+gradlew.bat
+settings.gradle
+*.~sql
+

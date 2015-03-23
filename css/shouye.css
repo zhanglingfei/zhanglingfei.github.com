@@ -1,0 +1,172 @@
+/* CSS Document */
+body{
+	font-size:12px;
+	margin:0 auto; 
+	background:url(../images/shouyeimages/denglu_01.jpg) repeat-x;
+	font-family: "寰蒋闆呴粦", "瀹嬩綋";
+}
+	
+#container{
+	width:980px; 
+	margin:0 auto; 
+	background-color:#FFF;
+}
+	
+.header{
+	width:100%; 
+	height:82px; 
+	background:url(../images/S_08051.gif) no-repeat; 
+	background-color:#36485c;
+} 
+	
+.main{
+	width:100%;  
+	height:473px; 
+}
+
+.user{
+	width:176px;
+	height:57px;
+	background:url(../images/shouyeimages/denglu_03.jpg);
+	margin-top:70px;
+	margin-left:30px;
+	float:left;
+}
+
+.content{
+	width:970px;
+	height:328px;
+	float:left;
+	background-color:#f9f9f9;
+	margin-top:18px;
+	margin-left:5px;
+}
+
+.regsiter_left{
+	width:314px;
+	height:auto;
+	font-size:18px;
+	color:#909090;
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+
+
+.login{
+	width:312px;
+	height:44px;
+	float:left;
+	background:#FFF;
+	border:1px #a3daf5 solid;
+	margin-top:20px;
+}
+
+.login_di{
+	width:100%;
+	float:left;
+	font-size:14px;
+	margin-top:20px;
+}
+
+.login_di   a:link   {text-decoration: none; color: #12a4e5;}   
+.login_di   a:visited   {text-decoration: none; color: #12a4e5;} 
+.login_di  a:hover{text-decoration: underline; color: #12a4e5;} 
+
+
+
+.login_a{
+	width:31px;
+	height:42px;
+	float:left;
+	background:url(../images/shouyeimages/denglu_04.jpg);
+}
+
+.login_b{
+	width:31px;
+	height:42px;
+	float:left;
+	background:url(../images/shouyeimages/denglu_05.jpg);
+}
+
+.login_right{
+	width:281px;
+	height:42px;
+	float:left;
+}
+
+.input{
+	width:270px;
+	height:38px;
+	margin-top:2px;
+	color:#909090;
+	font-size:14px;
+	outline:none;
+	border:0;
+}
+
+.regsiter_right{
+	width:400px;
+	height:auto;
+	font-size:18px;
+	color:#909090;
+	margin-top:40px;
+	margin-right:30px;
+	float:right;
+}
+
+.shejiao{
+	width:100%;
+	margin-top:20px;
+	float:left;
+}
+
+.shejiao   a:link   {text-decoration: none; color:#000;}   
+.shejiao   a:visited   {text-decoration: none; color:#000;} 
+.shejiao   a:hover{text-decoration: none; color: #12a4e5;} 
+
+.weibo{
+	width:161px;
+	height:42px;
+	font-size:12px;
+	line-height:42px;
+	background:url(../images/shouyeimages/weibo.jpg);
+	float:left;
+}
+
+.qq{
+	width:161px;
+	height:42px;
+	font-size:12px;
+	line-height:42px;
+	background:url(../images/shouyeimages/qq.jpg);
+	float:right;
+}
+
+.shuoming{
+	width:400px;
+	height:141px;
+	background:#FFF;
+	float:left;
+	margin-top:20px;
+}
+
+p{
+	font-size:12px;
+	line-height:24px;
+	color:#909090;
+	margin-left:30px;
+	margin-top:25px;
+}
+
+.footer{
+	width: auto;
+	height:50px;
+	color:#666666; 
+	background-color:#f0efef;
+	text-align:center;
+	line-height:50px;
+	margin-top:100px;
+	}
+	

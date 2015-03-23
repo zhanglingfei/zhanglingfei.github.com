@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表单的提交与验证</title>
+
+<script>
+  function $(id){
+	  return document.getElementById(id);
+	  
+	  }
+	  //如果检验通过就返回true 不通过返回false javascript方法可以不声明返回值但是可以用return返回一个值
+  function checkAccount(){
+	   //首先定义正则规则 从头到尾中间单词字符10个 w是允许有下划线的 i加载最后是忽略大小写的意思
+	   var reg_account=/^[a-zA-Z\d]{10}$/;   
+	   var val=$("accountId").value;
+	   if(reg_account.test(val)){
+		   $("accountMsg").className="pass";
+		   return true;
+		   
+		   }else{
+		   $("accountMsg").className="error";	   
+		   }
+		   return false;
+		   
+	  }
+	  
+ function checkPhone(){
+	 //区号3到4位 中间"-"可要可不要接着6到8位数字
+	  var reg_phone=/^\d{3,4}-?\d{6,8}$/;   
+	  var val=$("phoneId").value;
+	   if(reg_phone.test(val)){
+		   $("phoneMsg").className="pass";
+		   return true;
+		   
+		   }else{
+		   $("phoneMsg").className="error";	   
+		   }
+		   return false;
+
+	 }	  
+
+ function checkForm(){
+	 //如果不写if条件语句返回的是0 1导致onsubmit不认识 只认识true and false
+	 if(checkAccount() & checkPhone()){
+		 return true;
+		 }else{
+		 return false;	 
+		 }
+
+	 }
+	  
+	  
+
+
+</script>
+<style>
+     
+	#form {width:600px;border:5px solid #ddd;
+		   margin:6px auto;background:#eee;
+	}
+	#form h2{background:#000;color:#F00;
+	         text-align:center;font-size:18px;
+			 font-family:'微软雅黑','黑体';
+			 margin:0; padding:8px 0;
+	}
+	#form p{border-bottom:2px solid #ddd;}
+	#form div{text-align:center; }
+	#form label{font-family:'微软雅黑','黑体';}
+    #form .error{background: #FFFF99  url("images/wrong.gif") no-repeat  5px  center; border: 1px solid #F03; color: #FF00CC}
+	#form .pass{background: #eee url("images/ok.png") no-repeat 5px center; border: 1px solid #eee; color: #00CC33}
+    .focus{background:#FF9;}
+
+</style>
+
+</head>
+
+<body>
+	<h1>表单检验</h1>
+    <div id="form">
+    <!--onsubmit()属性是表单在向服务器传输之前执行 用于最后把关不让用户跳过检查 如果收到false结果就不向服务器提交表单-->
+       <form onsubmit="return checkForm()">
+         <h2>AEGIS SYSTEM LOGIN PORTAL </h2>
+         <p><label>管理员账号</label>
+            <!--onfocus事件是在控件获得焦点时候执行 点击的时候变成淡黄 离开的时候变回来!!
+            但是这样做不好应该把内容页面和脚本以及样式剥离开-->
+            <input id="accountId" type="text" name="accountId" 
+            onfocus="this.className="focus"" onblur="checkAccount();
+            this.className=''"/>
+            <span id="accountMsg" class="pass"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10位数字字母组合 </span>
+         </p> <!--表单中的一行 label是行内元素-->
+         
+         
+         
+         
+         <p><label>电话号码&nbsp;&nbsp;&nbsp;</label>
+            <input id="phoneId" type="text" name="phoneId" onfocus="this.className='focus'" onblur="checkPhone();
+            this.className=''" />
+            <span id="phoneMsg"class="pass"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如010-68994562 </span>
+         </p> <!--表单中的一行 label是行内元素-->
+         
+         <div>
+         
+            
+         	<input type="submit" value="SAVE" ";  />  <!--放按钮的地方--> 
+         </div>
+                
+       </form>
+    </div>
+    <a href="index.html">Return to Main</a>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>webvoc调研平台</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta content="no-cache" http-equiv="pragma" />
+		<meta property="qc:admins" content="074020431767526736375"/>
+		<meta property="wb:webmaster" content="461c95c7c3d60758" />
+		<meta content="no-cache, must-revalidate" http-equiv="Cache-Control" />
+		<meta content="0" http-equiv="expires" />
+		<script type="text/javascript" src="jquery/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/formValidator/DateTimeMask.js"></script>
+		<script type="text/javascript"
+			src="js/formValidator/formValidator-4.0.1.js"></script>
+		<script type="text/javascript"
+			src="js/formValidator/formValidatorRegex.js"></script>
+		<link rel="stylesheet" href="css/style.css"
+			type="text/css"></link>
+		<script type="text/javascript" src="js/get-root-path.js"></script>
+		<script type="text/javascript" src="js/jsp/login.js"></script>
+		<link rel="stylesheet" href="css/shouye.css" type="text/css"></link>
+	</head>
+
+	<body>
+			<div class="header"></div>
+		<div id="container">
+			<div class="main">
+				<div class="user"
+					style="width: 176px; height: 57px; background: url(../images/shouyeimages/denglu_03.jpg); margin-top: 70px; margin-left: 30px; float: left;"}></div>
+				<div class="content">
+					<div class="regsiter_left">
+						使用用户名登录
+						<form action="" name="mainForm" method="post" id="mainForm">
+							<div class="login">
+								<div class="login_a"></div>
+								<div class="login_right">
+									<input class="input" name="username" id="username" type="text"
+										size="30" onblur="errorTimes();" />
+								</div>
+								<div style="float: left; font-size: 14px;" id="usernameTip"
+									name="nameError"></div>
+
+							</div>
+							<div class="login">
+								<div class="login_b"></div>
+								<div class="login_right">
+									<input class="input" name="password" id="password"
+										type="password" size="20" />
+								</div>
+								<div style="float: left; font-size: 14px;" id="passwordTip"
+									name="passwordError"></div>
+							</div>
+
+
+							<div id="checkCode">
+								验证码：
+								<input type="text" name="code" id="code"
+									style="width: 82px; color: #cccc; margin-top: 25px;" value="" />
+								<img name="myimg" id="myimg" src="showCheckcode.action"
+									align="absmiddle" alt="看不清?请点击图片" style="cursor: pointer;"
+									value="xxx"
+									onclick="this.src='showCheckcode.action?ck='+Math.random()" />
+
+							</div>
+
+
+
+							<div class="login_di">
+								<input type="checkbox" name="rmbUser" id="rmbUser" value="1" />
+								记住密码（保留7天）&nbsp;|&nbsp;
+								<a href="login_findkey.jsp" target="_blank">忘记密码？</a>
+							</div>
+							<div class="login_di" align="center">
+								<input type="image" src="images/shouyeimages/denglu_07.jpg"
+									onmousemove="this.src='images/shouyeimages/denglu_07a.jpg'"
+									onmouseout="this.src='images/shouyeimages/denglu_07.jpg'"
+									id="sub" onclick="javascript:login();return false;" />
+								<input type="image" style="margin-left: 20px;"
+									src="images/shouyeimages/denglu_06.jpg"
+									onmousemove="this.src='images/shouyeimages/denglu_06a.jpg'"
+									onmouseout="this.src='images/shouyeimages/denglu_06.jpg'"
+									onclick="javascript:window.location.href='/bistone/login_zhuce.jsp';return false;"/>                        
+							</div>
+						</form>
+
+
+					</div>
+
+
+					<div class="regsiter_right">
+						使用社交账号登录
+						<div class="shejiao">
+							<div class="weibo">
+								<span style="margin-left: 50px;"><a
+									href="https://api.weibo.com/oauth2/authorize?response_type=code&AppKey=3349732155&redirect_uri=http%3A%2F%2Fwww.webvoc.com%2Foauth2_sina.jsp"
+									target="_blank">用微博账号登录</a> </span>
+							</div>
+							<div class="qq">
+								<span style="margin-left: 50px;"><a
+									href="qqLogin.action?answer=main" target="_blank">用QQ账号登录</a> </span>
+							</div>
+						</div>
+						<div class="shuoming">
+							<p>
+								<span style="font-size: 18px; color: #669900;"> 答题吧特别说明</span>
+								<br />
+
+								答题送积分
+								<br />
+								积分可以兑换相关奖品
+								<br />
+								最终解释权归北京商智通信息技术有限公司所有
+							</p>
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+		<div class="footer">
+			北京商智通信息技术有限公司 版权所有&nbsp;&copy;&nbsp;2010-2014
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$.cookie('show_a','0');
+	/*
+	 $(function() {
+	 //navigator.userLanguage  ie等其他浏览器  ,navigator.Language  google
+	 if (navigator.userLanguage == "en-us" || navigator.Language == 'en-us') {
+	 //alert("该浏览器是英文版，跳转到英文界面");
+	 } else {
+	 //alert("该浏览器是中文版，跳转到中文界面");
+	 }
+	 })
+	 */
+	
+</script>
